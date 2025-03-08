@@ -1,0 +1,198 @@
+:root{
+    --main-dark: #1F1717;
+    --red: #BB2525;
+    --cream: #F4BF96;
+    --main-white: #EEE2DE;
+}   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+h1{
+    color: var(--red);
+}
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.container::-webkit-scrollbar {
+    display: none;
+}
+.scroll-section {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+.scroll-section:nth-child(1){
+    background-color: var(--main-dark);
+    background-color: var(--main-dark);
+    position: relative;
+}
+.scroll-section:nth-child(1)::before{
+    content: "";
+    width: 100%;
+    height: 162px;
+    position: absolute;
+    bottom: -0.3%;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat no-repeat;
+    background-position: 0vw bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 1C19.5523 3 32.2291 5 51.5 9C104.5 19 200 43 300 65C400 88 500 111 600 102C700 93 800 53 900 30C987.526 5 1085.36 -1 1150 0C1169.54 -1 1180.49 0 1200 1V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V1.98128Z' fill='%23FFF5EE'/></svg>");
+}
+.scroll-section:nth-child(2){
+    background-color: white
+}
+.scroll-section:nth-child(3){
+    background-color: var(--cream);
+}
+.scroll-section:nth-child(4){
+    background-color: var(--main-dark);
+}
+.hero {
+    display: flex;
+    max-width: 1280px;
+    max-height: 620px;
+    width: 90%;
+    
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.664);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.hero img {
+    width: 50%;
+    object-fit: cover;
+}
+.hero-content {
+    width: 50%;
+    padding: 40px;
+    text-align: left;
+    margin-top: 5rem;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.button:hover::before {
+    top: 0;
+    left: 0;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.social-icons a {
+    font-size: 1.8rem;
+    color: #333;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    color: #007bff;
+}
+/* PROJECT CARD */
+.scroll-section.project-section{
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.scroll-section.project-section h1{
+    display: block;
+    text-align: left;
+    width: 80%;
+    margin-bottom: 1em;
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    width: 90%;
+}
+.project-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: left;
+}
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.project-card .content {
+    padding: 15px;
+}
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: 100dvh;
+    }
+    .hero img, .hero-content {
+        width: 100%;
+    }
+    .hero-content{ 
+        margin-top: 0;
+    }
+    .hero-content {
+        text-align: center;
+        padding: 20px;
+    }
+    .buttons {
+        justify-content: center;
+    }
+    .wave-container::before {    
+        height: 44px;
+      } 
+      .buttons{
+        gap: 5px;
+        margin-top: 10px;
+        font-size: 12px;
+      }
+}
