@@ -35,7 +35,7 @@ ul li a:hover{
    color: var(--darker-orange);
 }
 section {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,12 +149,15 @@ button{
 .skills, .projects, .contact {
     background: #2b3436;
 }
-
-.footer {
-    background: #1a1f21;
-    padding: 20px;
-    text-align: center;
+section.skills{
+    flex-direction: column;
+    height: 30dvh;
+    background-color:var(--darker-orange);
 }
+section.project{
+    height: 70dvh;
+}
+
 
 /* Responsive */
 @media (max-width: 968px) {
