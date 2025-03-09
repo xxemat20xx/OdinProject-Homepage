@@ -6,24 +6,26 @@
     <title>Raymart S. - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
         <header>
             <nav>
-                <div class="logo">&#9650; Some Logo</div>
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#hero" class="active"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="#projects"><i class="fa-solid fa-rocket"></i></a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-phone-volume"></i></a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <!-- hero -->
-        <section class="hero">
+        <section class="hero" id="hero">
+            
             <div class="content">
+               
                 <h1><span>Raymart S.</span></h1>
-                <p>I’m a self-learning web developer passionate about creating interactive and user-friendly web applications. I enjoy tackling challenges, learning new technologies, and constantly improving my skills in front-end and back-end development.</p>
+                <p>I’m a self-taught web developer passionate about creating interactive and user-friendly web applications. I enjoy tackling challenges, learning new technologies, and continuously improving my skills in front-end development. Soon, I’ll be diving into back-end development as well.</p>
                 <div class="buttons">
                     <a href="#" class="btn more-about-me">More about me <span>&#10230;</span></a>
                 
@@ -40,34 +42,132 @@
                 </ul>
             </div>
         </section>
-
+    <!-- Skills Section -->
         <section class="skills" id="skills">
             <h2>Skills</h2>
-            <div class="skills-card">
-                <div class="skill-card-content">
-                    <img src="" alt="...">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit necessitatibus veli</p>
-                    <button class="btn">Test</button>
-                </div>
-
-                <div class="skill-card-content">
-                    <img src="" alt="...">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit necessitatibus veli</p>
-                    <button class="btn">Test</button>
-                </div>
+            <div class="skills-content">
+            <i class="devicon-html5-plain-wordmark colored"></i>
+            <i class="devicon-css3-plain-wordmark colored"></i>
+            <i class="devicon-javascript-plain colored"></i>
+            <i class="devicon-webpack-plain colored"></i>
+            <i class="devicon-npm-original-wordmark colored"></i>
             </div>
         </section>
     
+        <!-- Project Sections -->
         <section class="projects" id="projects">
-            <h2>Projects</h2>
-            <p>Showcase your projects here...</p>
+            <h2>Odin Projects</h2>
+            <div class="project-content">
+                <p>Learning <span>HTML, CSS, and JavaScript</span> through <span>The Odin Project</span> is a hands-on journey that builds real-world web development skills. It starts with HTML and CSS, covering semantic markup, responsive design, and layout techniques like flexbox and grid. Then, JavaScript fundamentals like variables, loops, and DOM manipulation come into play, reinforced by interactive projects. The curriculum also covers Git, APIs, and best coding practices, encouraging problem-solving and self-learning. By the final projects, learners gain confidence in building dynamic web applications and thinking like a developer.</p>
+            </div>
+            <div class="container">
+                <div class="scroll-container" id="scrollable">
+                    <div class="project-item">
+                            <h3>Weather App</h3>
+                            <div class="project-item img">
+                                <img src="./imgs/project-imgs/weather-app.JPG" alt="...">
+                            </div>
+                            <div class="project-buttons">
+                                <a href="https://github.com/xxemat20xx/OdinProject--WeatherApp" type="button" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://xxemat20xx.github.io/OdinProject--WeatherApp/" type="button" class="btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Todo App</h3>
+                        <div class="project-item img">
+                            <img src="./imgs/project-imgs/Todo-app.JPG" alt="...">
+                        </div>
+                        <div class="project-buttons">
+                                <a href="https://github.com/xxemat20xx/OdinProject-Todolist" type="button" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://xxemat20xx.github.io/OdinProject-Todolist/" type="button" class="btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                </div>
+                <div class="project-item">
+                    <h3>Battleship</h3>
+                    <div class="project-item img">
+                        <img src="./imgs/project-imgs/Battleship.JPG" alt="...">
+                    </div>
+                    <div class="project-buttons">
+                                <a href="https://github.com/xxemat20xx/OdinProject-Battleship" type="button" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://xxemat20xx.github.io/OdinProject-Battleship/" type="button" class="btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Tic Tac Toe</h3>
+                        <div class="project-item img">
+                            <img src="./imgs/project-imgs/TicTacToe-app.JPG" alt="...">
+                        </div>
+                        <div class="project-buttons">
+                                <a href="https://github.com/xxemat20xx/TicTacToe" type="button" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://xxemat20xx.github.io/TicTacToe/" type="button" class="btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                        </div>
+                        <div class="project-item">
+                            <h3>Restaurant App</h3>
+                            <div class="project-item img">
+                                <img src="./imgs/project-imgs/Restaurant-app.JPG" alt="...">
+                            </div>
+                            <div class="project-buttons">
+                                <a href="https://github.com/xxemat20xx/RestaurantPage-ODIN?tab=readme-ov-file" type="button" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://xxemat20xx.github.io/RestaurantPage-ODIN/" type="button" class="btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Admin Dashboard</h3>
+                        <div class="project-item img">
+                            <img src="./imgs/project-imgs/Admin-dashboard.JPG" alt="...">
+                        </div>
+                        <div class="project-buttons">
+                                <a href="https://github.com/xxemat20xx/Admin-Dashboard" type="button" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://xxemat20xx.github.io/Admin-Dashboard/" type="button" class="btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                </div>
+                <div class="project-item">
+                    <h3>Etch-a-sketch App</h3>
+                    <div class="project-item img">
+                        <img src="./imgs/project-imgs/Etch-a-sketch-app.JPG" alt="...">
+                    </div>
+                    <div class="project-buttons">
+                                <a href="https://github.com/xxemat20xx/OdinProject-Etch-a-Sketch" type="button" class="btn" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://xxemat20xx.github.io/OdinProject-Etch-a-Sketch/" type="button" class="btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                </div>
+                <button class="scroll-btn left" id="scrollLeft">&#9664;</button>
+                <button class="scroll-btn right" id="scrollRight">&#9654;</button>
+              </div>
         </section>
-    
+        
+        <!-- Contact Secition -->
         <section class="contact" id="contact">
             <h2>Contact</h2>
-            <p>Provide your contact details here...</p>
+            <p>Feel free to reach out to me through the following channels:</p>
+            <ul class="contact-list">
+                <li>
+                    <i class="devicon-google-plain colored"></i>
+                    <strong>Email:</strong> <a href="mailto:raymart@example.com">emat5252@gmail.com</a>
+                </li>
+                <li>
+                    <i class="devicon-github-original colored"></i>
+                    <strong>GitHub:</strong> <a href="https://github.com/xxemat20xx" target="_blank">xxemat20xx</a>
+                </li>
+                <li>
+                    <i class="devicon-linkedin-plain colored"></i>
+                    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/raymart-t-santiago-024aa41b2/" target="_blank">Raymart S.</a>
+                </li>
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <strong>Phone:</strong> +63 912 345 6789
+                </li>
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <strong>Location:</strong> Philippines
+                </li>
+            </ul>
         </section>
-    
+        
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

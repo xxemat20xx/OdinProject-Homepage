@@ -1,17 +1,21 @@
-/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 :root{
     --main-black: #373A40;
     --grey: #686D76;
     --white: #EEEEEE;
     --orange: #DC5F00;
+    --light-orange: #ff8325;
     --darker-orange: #b64f01;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
     scroll-behavior: smooth;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body, html {
@@ -22,6 +26,13 @@ body, html {
     overflow-y: auto;
     scroll-snap-type: y mandatory;
 }
+p{
+    font-weight: 400;
+}
+h1,h2{
+    font-weight: 800;
+    font-size: 2rem;
+}
 ul li{
     list-style: none;
 
@@ -30,10 +41,25 @@ ul li a{
     color: var(--white);
     text-decoration: none;
     transition: 0.3s ease-in-out;
+    font-weight: 800;
+}
+span{
+    color: var(--orange);
+    font-weight: 800;
 }
 ul li a:hover{
    color: var(--darker-orange);
 }
+.skills h2::after,
+.projects h2::after{
+    content: "";
+    width: 30px;
+    margin: 1rem auto;
+    height: 3px;
+    display: block;
+    background-color: var(--orange);
+}
+
 section {
     height: 100vh;
     display: flex;
@@ -49,31 +75,29 @@ main{
     width: 70%;
     margin: auto;
 }
-/* Nav css */
 header{
     position: fixed;
-    width: 100%;
-    margin: 1em 0;
-}
-nav{
+    top: 40%;
+    left: 5%;
+    min-width: 40px;
+    height: 250px;
+    background-color: var(--grey);
+    border-radius: 3rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    background-color:var(--main-black);
-    margin: auto;
-    width: 65%;
-    padding: 8px 15px;
-    border-radius: 5rem;
-
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.205);
 }
 nav ul{
     display: flex;
-    gap: 25px;
+    gap: 30px;
+    flex-direction: column;
 }
-nav .logo{
-    color: var(--orange);
-    font-weight: bold;
-    font-size: 1.5rem;
+nav ul li a{
+    color: var(--light-orange);
+}
+nav ul li a:hover{
+    color: var(--white);
 }
 /* Hero Section */
 .hero {
@@ -86,6 +110,7 @@ nav .logo{
 }
 .hero .content h1 span{font-size: 5rem;}
 .hero .content p{font-size: 1.2rem; line-height: 2rem;}
+.hero span{color: var(--white);}
 .content {
     max-width: 50%;
 }
@@ -141,36 +166,179 @@ button{
 }
 
 /* Profile Image */
+.profile-image{ 
+    min-width: 550px;
+}
 .profile-image img {
-    width: 120%;
+    
+    width: 100%;
     border-radius: 10px;
 }
 /* Sections */
 .skills, .projects, .contact {
-    background: #2b3436;
+    background: var(--main-black);
 }
+/* Skills CSS */
 section.skills{
     flex-direction: column;
-    height: 30dvh;
-    background-color:var(--darker-orange);
+    height: 40dvh;
+    font-size: 2rem;
 }
-section.project{
+section.skills h2{ font-size: 2rem; }
+section.skills i{font-size: 4rem;}
+.skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 3rem;
+}
+
+/* Project CSS */
+section.projects{
     height: 70dvh;
+    margin-top: 5rem;
+    flex-direction: column;
+}
+.projects .container {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    height: 800px;
+  }
+  .project-item {
+    min-width: 500px;
+    background: #444;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .project-item.img img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+.project-buttons{
+    width: 100%;
+    text-align: left;
+}
+.project-buttons .btn{
+    background-color: transparent;
+    font-size: 1.2em;
+    transition: 0.4s ease-in-out;
+}
+.project-buttons .btn:hover{
+    color: var(--darker-orange);
+}
+.project-content{
+    text-align: justify;
+    margin-top: 1rem;
+}
+  .scroll-container {
+    overflow-x: auto;
+    display: flex;
+    gap: 10px;
+    scroll-behavior: smooth;
+    /* Add padding to make room for buttons overlay */
+    padding: 10px 40px;
+  }
+  /* Hide scrollbar for WebKit browsers */
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+  .scroll-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .scroll-btn:hover {
+    color: var(--darker-orange);
+  }
+  .scroll-btn.left {
+    left: -30px;
+  }
+  .scroll-btn.right {
+    right: -30px;
+  }
+  /* CONTACT CSS */
+  .contact {
+    text-align: center;
+    padding: 50px 20px;
+    flex-direction: column;
+}
+.contact-list {
+    list-style: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    background: var(--darker-orange);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
 
-/* Responsive */
+.contact-list li:hover {
+    transform: scale(1.05);
+}
+.contact-list li a:hover {
+    color: var(--white);
+}
+.contact-list i {
+    font-size: 1.5rem;
+    color: var(--white);
+}
 @media (max-width: 968px) {
     .hero {
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: center;
-        min-height: 60vh;
+        min-height: auto; /* Change from 30vh to auto */
+        padding: 20px 0; /* Add some padding instead */
+        justify-content: space-evenly;
+    }
+    .hero .content{
+        order: 2;
     }
     .social-links{
-        display: none;
+        order: 3;
     }
-    .hero .content h1 span{font-size: 3rem;}
-    .hero .content p{font-size: 1rem; line-height: 1.3rem;}
+    .social-links ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .social-link-line{
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+    section.skills i,section.skills h2{font-size: 2rem;}
+    .hero .content h1 span {
+        font-size: 3rem;
+    }
+    .hero .content p {
+        font-size: 1rem; 
+        line-height: 1.3rem;
+    }
     .content {
         max-width: 100%;
     }
@@ -178,7 +346,8 @@ section.project{
         justify-content: center;
     }
     .profile-image img {
-        margin-top: 20px;
-        width: 400px;
+        margin-top: 10px; 
+        width: 400px; 
     }
 }
+
