@@ -195,9 +195,10 @@ section.skills i{font-size: 4rem;}
 
 /* Project CSS */
 section.projects{
-    height: 70dvh;
+    height: auto;
     margin-top: 5rem;
     flex-direction: column;
+   
 }
 .projects .container {
     position: relative;
@@ -205,6 +206,7 @@ section.projects{
     padding: 10px;
     color: #fff;
     height: 800px;
+    margin-top: 5rem;
   }
   .project-item {
     min-width: 500px;
@@ -235,8 +237,11 @@ section.projects{
     color: var(--darker-orange);
 }
 .project-content{
+    max-width: 90%; 
+    font-size: 1.2rem;
+    line-height: 1.6;
     text-align: justify;
-    margin-top: 1rem;
+    margin: 0 auto;
 }
   .scroll-container {
     overflow-x: auto;
@@ -245,6 +250,8 @@ section.projects{
     scroll-behavior: smooth;
     /* Add padding to make room for buttons overlay */
     padding: 10px 40px;
+   
+   
   }
   /* Hide scrollbar for WebKit browsers */
   .scroll-container::-webkit-scrollbar {
@@ -276,6 +283,7 @@ section.projects{
     text-align: center;
     padding: 50px 20px;
     flex-direction: column;
+    height: auto;
 }
 .contact-list {
     list-style: none;
@@ -335,6 +343,9 @@ section.projects{
     .hero .content h1 span {
         font-size: 3rem;
     }
+    .section.projects{
+        margin-top: 0;
+    }
     .hero .content p {
         font-size: 1rem; 
         line-height: 1.3rem;
@@ -348,6 +359,15 @@ section.projects{
     .profile-image img {
         margin-top: 10px; 
         width: 400px; 
+    }
+    .project-content{
+        text-align: left;
+    }
+    .contact-list {
+        max-width: 250px;
+    }
+    .contact-list li {
+        font-size: 12px;
     }
 }
 
